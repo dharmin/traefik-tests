@@ -1,0 +1,28 @@
+defaultEntryPoints = ["http", "https"]
+
+InsecureSkipVerify = true
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+[retry]
+
+
+[api]
+entryPoint = "traefik"
+dashboard = true
+debug = true
+
+[docker]
+domain = "docker.local"
+watch = true
+exposedByDefault = false
+
+[file]
+directory = "/etc/traefik/endpoints/"
+watch = true
