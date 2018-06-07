@@ -1,3 +1,4 @@
+```
 docker run --name self-cert-test \
       -v ~/self-cert/index.html:/usr/share/nginx/html/index.html:ro -d \
       -v ~/self-cert/certs/nginx-selfsigned.crt:/etc/ssl/certs/nginx-selfsigned.crt \
@@ -13,4 +14,4 @@ docker run --name self-cert-test \
       -l "traefik.frontend.redirect.regex=^https?://www.site1.test/(.*)" \
       -l "traefik.frontend.redirect.replacement=https://site1.test/$${1}" \
       nginx:dharmin
-
+```

@@ -1,3 +1,4 @@
+```
 $ curl -vvIL site1.test --insecure
 * Rebuilt URL to: site1.test/
 *   Trying 127.0.0.1...
@@ -90,3 +91,4 @@ Server: nginx/1.13.12
 < 
 * Connection #1 to host site1.test left intact
 
+```
