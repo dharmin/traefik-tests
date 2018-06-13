@@ -1,0 +1,135 @@
+Script started on 2018-06-12 12:30:30+0000
+* Rebuilt URL to: single-site-self-signed/
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to single-site-self-signed (127.0.0.1) port 80 (#0)
+> HEAD / HTTP/1.1
+> Host: single-site-self-signed
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/1.1 302 Found
+HTTP/1.1 302 Found
+< Location: https://single-site-self-signed:443/
+Location: https://single-site-self-signed:443/
+< Date: Tue, 12 Jun 2018 12:30:30 GMT
+Date: Tue, 12 Jun 2018 12:30:30 GMT
+< Content-Length: 5
+Content-Length: 5
+< Content-Type: text/plain; charset=utf-8
+Content-Type: text/plain; charset=utf-8
+
+< 
+* Connection #0 to host single-site-self-signed left intact
+* Issue another request to this URL: 'https://single-site-self-signed:443/'
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to single-site-self-signed (127.0.0.1) port 443 (#1)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: /etc/ssl/certs
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=IN; ST=MH; L=PUNE; O=GUGAL; OU=MAYKRAVSAFT; CN=site1.test; emailAddress=MAYKRAVSAFT@GUGAL.KOM
+*  start date: Jun  7 10:21:25 2018 GMT
+*  expire date: Jun  7 10:21:25 2019 GMT
+*  issuer: C=IN; ST=MH; L=PUNE; O=GUGAL; OU=MAYKRAVSAFT; CN=site1.test; emailAddress=MAYKRAVSAFT@GUGAL.KOM
+*  SSL certificate verify result: self signed certificate (18), continuing anyway.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x55acc5e858e0)
+> HEAD / HTTP/2
+> Host: single-site-self-signed
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+* Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+< HTTP/2 302 
+HTTP/2 302 
+< cache-control: no-cache, must-revalidate, max-age=0
+cache-control: no-cache, must-revalidate, max-age=0
+< content-type: text/html; charset=UTF-8
+content-type: text/html; charset=UTF-8
+< date: Tue, 12 Jun 2018 12:30:30 GMT
+date: Tue, 12 Jun 2018 12:30:30 GMT
+< expires: Wed, 11 Jan 1984 05:00:00 GMT
+expires: Wed, 11 Jan 1984 05:00:00 GMT
+< location: http://single-site-self-signed/wp-admin/install.php
+location: http://single-site-self-signed/wp-admin/install.php
+< server: openresty
+server: openresty
+< x-powered-by: PHP/7.2.6
+x-powered-by: PHP/7.2.6
+< x-powered-by: EasyEngine v4.0.0
+x-powered-by: EasyEngine v4.0.0
+
+< 
+* Connection #1 to host single-site-self-signed left intact
+* Issue another request to this URL: 'http://single-site-self-signed/wp-admin/install.php'
+* Found bundle for host single-site-self-signed: 0x55acc5e85680 [can pipeline]
+* Re-using existing connection! (#0) with host single-site-self-signed
+* Connected to single-site-self-signed (127.0.0.1) port 80 (#0)
+> HEAD /wp-admin/install.php HTTP/1.1
+> Host: single-site-self-signed
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/1.1 302 Found
+HTTP/1.1 302 Found
+< Location: https://single-site-self-signed:443/wp-admin/install.php
+Location: https://single-site-self-signed:443/wp-admin/install.php
+< Date: Tue, 12 Jun 2018 12:30:30 GMT
+Date: Tue, 12 Jun 2018 12:30:30 GMT
+< Content-Length: 5
+Content-Length: 5
+< Content-Type: text/plain; charset=utf-8
+Content-Type: text/plain; charset=utf-8
+
+< 
+* Connection #0 to host single-site-self-signed left intact
+* Issue another request to this URL: 'https://single-site-self-signed:443/wp-admin/install.php'
+* Found bundle for host single-site-self-signed: 0x55acc5e843f0 [can multiplex]
+* Re-using existing connection! (#1) with host single-site-self-signed
+* Connected to single-site-self-signed (127.0.0.1) port 443 (#1)
+* Using Stream ID: 3 (easy handle 0x55acc5e858e0)
+> HEAD /wp-admin/install.php HTTP/2
+> Host: single-site-self-signed
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/2 200 
+HTTP/2 200 
+< cache-control: no-cache, must-revalidate, max-age=0
+cache-control: no-cache, must-revalidate, max-age=0
+< content-type: text/html; charset=utf-8
+content-type: text/html; charset=utf-8
+< date: Tue, 12 Jun 2018 12:30:31 GMT
+date: Tue, 12 Jun 2018 12:30:31 GMT
+< expires: Wed, 11 Jan 1984 05:00:00 GMT
+expires: Wed, 11 Jan 1984 05:00:00 GMT
+< server: openresty
+server: openresty
+< vary: Accept-Encoding
+vary: Accept-Encoding
+< x-powered-by: PHP/7.2.6
+x-powered-by: PHP/7.2.6
+< x-powered-by: EasyEngine v4.0.0
+x-powered-by: EasyEngine v4.0.0
+
+< 
+* Connection #1 to host single-site-self-signed left intact
+
+Script done on 2018-06-12 12:30:31+0000

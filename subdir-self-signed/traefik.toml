@@ -1,0 +1,32 @@
+defaultEntryPoints = ["http", "https"]
+
+InsecureSkipVerify = true
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+        [[entryPoints.https.tls.certificates]]
+        certFile = "/certs/nginx-selfsigned.crt"
+        keyFile = "/certs/nginx-selfsigned.key"
+[retry]
+
+
+[api]
+entryPoint = "traefik"
+dashboard = true
+debug = true
+
+[docker]
+domain = "docker.local"
+watch = true
+exposedByDefault = false
+
+[file]
+directory = "/etc/traefik/endpoints/"
+watch = true
+
