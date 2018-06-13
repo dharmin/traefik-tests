@@ -1,0 +1,57 @@
+Script started on 2018-06-12 14:55:57+0000
+* Rebuilt URL to: www.single-site-www-to-non-wwww/
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to www.single-site-www-to-non-wwww (127.0.0.1) port 80 (#0)
+> HEAD / HTTP/1.1
+> Host: www.single-site-www-to-non-wwww
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/1.1 301 Moved Permanently
+HTTP/1.1 301 Moved Permanently
+< Content-Type: text/html; charset=UTF-8
+Content-Type: text/html; charset=UTF-8
+< Date: Tue, 12 Jun 2018 14:55:57 GMT
+Date: Tue, 12 Jun 2018 14:55:57 GMT
+< Location: http://single-site-www-to-non-wwww/
+Location: http://single-site-www-to-non-wwww/
+< Server: openresty
+Server: openresty
+< X-Powered-By: PHP/7.2.6
+X-Powered-By: PHP/7.2.6
+< X-Powered-By: EasyEngine v4.0.0
+X-Powered-By: EasyEngine v4.0.0
+
+< 
+* Connection #0 to host www.single-site-www-to-non-wwww left intact
+* Issue another request to this URL: 'http://single-site-www-to-non-wwww/'
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to single-site-www-to-non-wwww (127.0.0.1) port 80 (#1)
+> HEAD / HTTP/1.1
+> Host: single-site-www-to-non-wwww
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< Content-Type: text/html; charset=UTF-8
+Content-Type: text/html; charset=UTF-8
+< Date: Tue, 12 Jun 2018 14:55:57 GMT
+Date: Tue, 12 Jun 2018 14:55:57 GMT
+< Link: <http://single-site-www-to-non-wwww/index.php?rest_route=/>; rel="https://api.w.org/"
+Link: <http://single-site-www-to-non-wwww/index.php?rest_route=/>; rel="https://api.w.org/"
+< Server: openresty
+Server: openresty
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< X-Powered-By: PHP/7.2.6
+X-Powered-By: PHP/7.2.6
+< X-Powered-By: EasyEngine v4.0.0
+X-Powered-By: EasyEngine v4.0.0
+
+< 
+* Connection #1 to host single-site-www-to-non-wwww left intact
+
+Script done on 2018-06-12 14:55:57+0000
