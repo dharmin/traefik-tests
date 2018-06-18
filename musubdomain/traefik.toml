@@ -1,0 +1,56 @@
+#Traefik Configuration
+
+# https://github.com/containous/traefik/issues/1957#issuecomment-361215934
+# The following line is commented due to the above issue
+# defaultEntryPoints = ["http", "https"]
+defaultEntryPoints = ["https"]
+logLevel = "DEBUG"
+
+[entryPoints]
+
+[entryPoints.traefik]
+address = ":8080"
+
+[entryPoints.http]
+address = ":80"
+
+[entryPoints.http.redirect]
+entryPoint = "https"
+
+[entryPoints.https]
+address = ":443"
+
+[entryPoints.https.tls]
+
+[retry]
+
+[api]
+entryPoint = "traefik"
+dashboard = true
+debug = true
+
+[docker]
+domain = "docker.local"
+watch = true
+exposedByDefault = false
+
+[acme]
+email = "mail@example.com"
+storage = "/etc/traefik/acme.json"
+entryPoint = "https"
+onHostRule = true
+acmeLogging = true
+caServer = "https://acme-v02.api.letsencrypt.org/directory"
+
+[acme.dnsChallenge]
+  provider = "cloudflare"
+  delayBeforeCheck = 0
+[[acme.domains]]
+   main = "example.com"
+[[acme.domains]]
+   main = "*.example.com"
+
+[file]
+directory = "/etc/traefik/endpoints/"
+watch = true
+
